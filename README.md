@@ -69,4 +69,40 @@ Our project will follow a structured data science methodology:
 
 ## 🚀 Getting Started (for local development)
 
-1
+11.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/your-username/JCUB-Student-Success-Analytics.git](https://github.com/your-username/JCUB-Student-Success-Analytics.git)
+    cd JCUB-Student-Success-Analytics
+    ```
+2.  **Set up a virtual environment:**
+    ```bash
+    python -m venv .venv
+    source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+    ```
+3.  **Install dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+    *(Note: `requirements.txt` will be generated based on the libraries used in the notebooks and scripts.)*
+4.  **Access Notebooks:** Navigate to the `notebooks/` directory to explore the data cleaning, feature engineering, and model development steps.
+
+## 📄 Usage
+
+*(Placeholder: Instructions on how to run specific notebooks, scripts, or view Power BI reports locally or online.)*
+
+## 🔮 Future Work & Recommendations for JCUB
+
+* **Integrate Real Data:** The most critical next step is to integrate real, anonymized student data to train and validate truly accurate predictive models.
+* **Automate Data Pipelines:** Establish automated data extraction from university systems (SIS, LMS, support logs) to ensure a continuous flow of high-quality data.
+* **Standardize Data Collection:** Implement consistent protocols for recording all relevant student data points across departments.
+* **Longitudinal Data Tracking:** Capture time-series data more granularly to track student progression and the impact of interventions over time.
+* **Intervention Efficacy Measurement:** Design data collection to explicitly track the outcomes and effectiveness of different support interventions.
+* **Ethical Considerations:** Continuously review and ensure fairness, privacy, and transparency in the use of predictive analytics for student support.
+* **Iterative Model Refinement:** Establish a process for continuous monitoring, feedback, and retraining of the predictive model to maintain relevance and accuracy.
+
+## 🤝 Team
+
+* Molormaa Ch (Research and Development)
+* Galey Wangmo (Team Lead and Coordinator)
+* Fahim Forhad (Data Exploration and Modeling)
+* Buyankhishig M (UI/UX and Communication)
