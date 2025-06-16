@@ -69,24 +69,7 @@ Our project will follow a structured data science methodology:
 
 ## 🚀 Getting Started (for local development)
 
-1.  **Clone the repository:**
-    
-    ```bash
-    git clone [https://github.com/your-username/JCUB-Student-Success-Analytics.git](https://github.com/your-username/JCUB-Student-Success-Analytics.git)
-    cd JCUB-Student-Success-Analytics
-    ```
-2.  **Set up a virtual environment:**
-   
-    ```bash
-    python -m venv .venv
-    source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-    ```
-3.  **Install dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-    *(Note: `requirements.txt` will be generated based on the libraries used in the notebooks and scripts.)*
-4.  **Access Notebooks:** Navigate to the `notebooks/` directory to explore the data cleaning, feature engineering, and model development steps.
+### Under CONSTRUCTION!!!
 
 ## 📄 Usage
 
