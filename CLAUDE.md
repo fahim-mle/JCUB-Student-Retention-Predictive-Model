@@ -1,7 +1,7 @@
 # JCUB Student Retention Predictive Model
 
 ## Project Overview
-This project contains tools and models for predicting student retention at JCUB (Jamaica College University of Business).
+This project contains tools and models for predicting student retention at JCUB (James Cook University Brisbane).
 
 ## Project Structure
 - `file_converter/` - Excel to CSV conversion utilities
@@ -11,15 +11,18 @@ This project contains tools and models for predicting student retention at JCUB 
 
 ## Development Setup
 1. Create virtual environment: `python3 -m venv venv`
-2. Activate virtual environment: `source venv/bin/activate`
-3. Install dependencies: `pip install pandas openpyxl`
+2. **Activate virtual environment**: `source venv/bin/activate` or use `./activate.sh`
+3. Install dependencies: `pip install pandas openpyxl jupyter matplotlib seaborn scikit-learn`
+
+**Note**: For each command session, include virtual environment activation:
+```bash
+source venv/bin/activate && your_command_here
+```
 
 ## File Converter Usage
 ```bash
-cd file_converter
-source ../venv/bin/activate
-python excel_to_csv.py <excel_file>
-python excel_to_csv.py --all [directory]
+source venv/bin/activate && cd file_converter && python excel_to_csv.py <excel_file>
+source venv/bin/activate && cd file_converter && python excel_to_csv.py --all [directory]
 ```
 
 ## Git Commands
