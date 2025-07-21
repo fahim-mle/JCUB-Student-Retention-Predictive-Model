@@ -1,0 +1,1423 @@
+{
+  "courses_and_subjects": [
+    {
+      "course_name": "Bachelor of Business",
+      "subject_list": [
+        {
+          "subject_code": "BU1002",
+          "subject_name": "Accounting for Decision Making"
+        },
+        {
+          "subject_code": "BU1003",
+          "subject_name": "Principles of Economics"
+        },
+        {
+          "subject_code": "BU1007",
+          "subject_name": "Principles of Data Analysis for Business"
+        },
+        {
+          "subject_code": "BU1104",
+          "subject_name": "Introduction to Management Concepts and Application"
+        },
+        {
+          "subject_code": "BU1105",
+          "subject_name": "Professional and Academic Skills for Business"
+        },
+        {
+          "subject_code": "BU1108",
+          "subject_name": "Marketing Matters"
+        },
+        {
+          "subject_code": "BU1109",
+          "subject_name": "Career Development for Business Professionals"
+        },
+        {
+          "subject_code": "BU1112",
+          "subject_name": "Business Law"
+        },
+        {
+          "subject_code": "BU3101",
+          "subject_name": "Professional Internship"
+        },
+        {
+          "subject_code": "BU3102",
+          "subject_name": "Multidisciplinary Project"
+        },
+        {
+          "subject_code": "BX2011",
+          "subject_name": "Foundation of Accounting Principles"
+        },
+        {
+          "subject_code": "BX2012",
+          "subject_name": "Cost Management and Control"
+        },
+        {
+          "subject_code": "BX2014",
+          "subject_name": "Principles of Finance"
+        },
+        {
+          "subject_code": "BX2019",
+          "subject_name": "Accounting Information Systems"
+        },
+        {
+          "subject_code": "BX2051",
+          "subject_name": "Managing People"
+        },
+        {
+          "subject_code": "BX2061",
+          "subject_name": "Business Negotiation"
+        },
+        {
+          "subject_code": "BX2062",
+          "subject_name": "Operations Management"
+        },
+        {
+          "subject_code": "BX2077",
+          "subject_name": "Project Management"
+        },
+        {
+          "subject_code": "BX2091",
+          "subject_name": "Tourism and Leisure Management"
+        },
+        {
+          "subject_code": "BX2112",
+          "subject_name": "Law of Business Organisations"
+        },
+        {
+          "subject_code": "BX2174",
+          "subject_name": "Evidence Based Business Decision-Making"
+        },
+        {
+          "subject_code": "BX3013",
+          "subject_name": "Strategic Performance Management"
+        },
+        {
+          "subject_code": "BX3014",
+          "subject_name": "Auditing and Assurance"
+        },
+        {
+          "subject_code": "BX3061",
+          "subject_name": "International Business"
+        },
+        {
+          "subject_code": "BX3082",
+          "subject_name": "International Marketing in the Global Village"
+        },
+        {
+          "subject_code": "BX3095",
+          "subject_name": "Visitor and Crowd Behaviour Management"
+        },
+        {
+          "subject_code": "BX3152",
+          "subject_name": "Managing a Global Workforce"
+        },
+        {
+          "subject_code": "BX3171",
+          "subject_name": "Organisational Behaviour"
+        },
+        {
+          "subject_code": "BX3173",
+          "subject_name": "Innovation Driven Entrepreneurship"
+        },
+        {
+          "subject_code": "BX3174",
+          "subject_name": "Strategic Management & Leadership"
+        }
+      ]
+    },
+    {
+      "course_name": "Bachelor of Commerce",
+      "subject_list": [
+        {
+          "subject_code": "BU1002",
+          "subject_name": "Accounting for Decision Making"
+        },
+        {
+          "subject_code": "BU1003",
+          "subject_name": "Principles of Economics"
+        },
+        {
+          "subject_code": "BU1007",
+          "subject_name": "Principles of Data Analysis for Business"
+        },
+        {
+          "subject_code": "BU1104",
+          "subject_name": "Introduction to Management Concepts and Application"
+        },
+        {
+          "subject_code": "BU1105",
+          "subject_name": "Professional and Academic Skills for Business"
+        },
+        {
+          "subject_code": "BU1108",
+          "subject_name": "Marketing Matters"
+        },
+        {
+          "subject_code": "BU1109",
+          "subject_name": "Career Development for Business Professionals"
+        },
+        {
+          "subject_code": "BU1112",
+          "subject_name": "Business Law"
+        },
+        {
+          "subject_code": "BU3101",
+          "subject_name": "Professional Internship"
+        },
+        {
+          "subject_code": "BU3102",
+          "subject_name": "Multidisciplinary Project"
+        },
+        {
+          "subject_code": "BX2011",
+          "subject_name": "Foundation of Accounting Principles"
+        },
+        {
+          "subject_code": "BX2012",
+          "subject_name": "Cost Management and Control"
+        },
+        {
+          "subject_code": "BX2014",
+          "subject_name": "Principles of Finance"
+        },
+        {
+          "subject_code": "BX2019",
+          "subject_name": "Accounting Information Systems"
+        },
+        {
+          "subject_code": "BX2051",
+          "subject_name": "Managing People"
+        },
+        {
+          "subject_code": "BX2061",
+          "subject_name": "Business Negotiation"
+        },
+        {
+          "subject_code": "BX2062",
+          "subject_name": "Operations Management"
+        },
+        {
+          "subject_code": "BX2077",
+          "subject_name": "Project Management"
+        },
+        {
+          "subject_code": "BX2091",
+          "subject_name": "Tourism and Leisure Management"
+        },
+        {
+          "subject_code": "BX2112",
+          "subject_name": "Law of Business Organisations"
+        },
+        {
+          "subject_code": "BX2174",
+          "subject_name": "Evidence Based Business Decision-Making"
+        },
+        {
+          "subject_code": "BX3013",
+          "subject_name": "Strategic Performance Management"
+        },
+        {
+          "subject_code": "BX3014",
+          "subject_name": "Auditing and Assurance"
+        },
+        {
+          "subject_code": "BX3061",
+          "subject_name": "International Business"
+        },
+        {
+          "subject_code": "BX3082",
+          "subject_name": "International Marketing in the Global Village"
+        },
+        {
+          "subject_code": "BX3095",
+          "subject_name": "Visitor and Crowd Behaviour Management"
+        },
+        {
+          "subject_code": "BX3152",
+          "subject_name": "Managing a Global Workforce"
+        },
+        {
+          "subject_code": "BX3171",
+          "subject_name": "Organisational Behaviour"
+        },
+        {
+          "subject_code": "BX3173",
+          "subject_name": "Innovation Driven Entrepreneurship"
+        },
+        {
+          "subject_code": "BX3174",
+          "subject_name": "Strategic Management & Leadership"
+        }
+      ]
+    },
+    {
+      "course_name": "Bachelor of Information Technology",
+      "subject_list": [
+        {
+          "subject_code": "CP1401",
+          "subject_name": "Fundamentals of Problem Solving and Programming I"
+        },
+        {
+          "subject_code": "CP1402",
+          "subject_name": "Internet Fundamentals"
+        },
+        {
+          "subject_code": "CP1403",
+          "subject_name": "Design Thinking I"
+        },
+        {
+          "subject_code": "CP1404",
+          "subject_name": "Programming II"
+        },
+        {
+          "subject_code": "CP1406",
+          "subject_name": "Web Design and Development"
+        },
+        {
+          "subject_code": "CP1407",
+          "subject_name": "Introductory Machine Learning and Data Science"
+        },
+        {
+          "subject_code": "CP2403",
+          "subject_name": "Information Processing and Visualisation"
+        },
+        {
+          "subject_code": "CP2404",
+          "subject_name": "Database Modelling"
+        },
+        {
+          "subject_code": "CP2406",
+          "subject_name": "Programming III"
+        },
+        {
+          "subject_code": "CP2408",
+          "subject_name": "Design Thinking II"
+        },
+        {
+          "subject_code": "CP2414",
+          "subject_name": "Network Security"
+        },
+        {
+          "subject_code": "CP2501",
+          "subject_name": "Cloud Computing"
+        },
+        {
+          "subject_code": "CP3101",
+          "subject_name": "Professional Internship"
+        },
+        {
+          "subject_code": "CP3102",
+          "subject_name": "Multidisciplinary Project"
+        },
+        {
+          "subject_code": "CP3401",
+          "subject_name": "e-Strategic Management"
+        },
+        {
+          "subject_code": "CP3402",
+          "subject_name": "Content Management Systems"
+        },
+        {
+          "subject_code": "CP3403",
+          "subject_name": "Data Mining"
+        },
+        {
+          "subject_code": "CP3404",
+          "subject_name": "Information Security"
+        },
+        {
+          "subject_code": "CP3405",
+          "subject_name": "Design Thinking III"
+        },
+        {
+          "subject_code": "CP3406",
+          "subject_name": "Mobile Computing"
+        },
+        {
+          "subject_code": "CP3413",
+          "subject_name": "Information Processing and Visualisation"
+        },
+        {
+          "subject_code": "CP3501",
+          "subject_name": "Deep Learning"
+        },
+        {
+          "subject_code": "CP3511",
+          "subject_name": "Cloud Computing"
+        }
+      ]
+    },
+    {
+      "course_name": "Bachelor of Tourism, Hospitality and Events",
+      "subject_list": [
+        {
+          "subject_code": "BX2011",
+          "subject_name": "Foundation of Accounting Principles"
+        },
+        {
+          "subject_code": "BX2012",
+          "subject_name": "Cost Management and Control"
+        },
+        {
+          "subject_code": "BX2014",
+          "subject_name": "Principles of Finance"
+        },
+        {
+          "subject_code": "BX2019",
+          "subject_name": "Accounting Information Systems"
+        },
+        {
+          "subject_code": "BX2051",
+          "subject_name": "Managing People"
+        },
+        {
+          "subject_code": "BX2061",
+          "subject_name": "Business Negotiation"
+        },
+        {
+          "subject_code": "BX2062",
+          "subject_name": "Operations Management"
+        },
+        {
+          "subject_code": "BX2077",
+          "subject_name": "Project Management"
+        },
+        {
+          "subject_code": "BX2091",
+          "subject_name": "Tourism and Leisure Management"
+        },
+        {
+          "subject_code": "BX2112",
+          "subject_name": "Law of Business Organisations"
+        },
+        {
+          "subject_code": "BX2174",
+          "subject_name": "Evidence Based Business Decision-Making"
+        },
+        {
+          "subject_code": "BX3013",
+          "subject_name": "Strategic Performance Management"
+        },
+        {
+          "subject_code": "BX3014",
+          "subject_name": "Auditing and Assurance"
+        },
+        {
+          "subject_code": "BX3061",
+          "subject_name": "International Business"
+        },
+        {
+          "subject_code": "BX3082",
+          "subject_name": "International Marketing in the Global Village"
+        },
+        {
+          "subject_code": "BX3095",
+          "subject_name": "Visitor and Crowd Behaviour Management"
+        },
+        {
+          "subject_code": "BX3152",
+          "subject_name": "Managing a Global Workforce"
+        },
+        {
+          "subject_code": "BX3171",
+          "subject_name": "Organisational Behaviour"
+        },
+        {
+          "subject_code": "BX3173",
+          "subject_name": "Innovation Driven Entrepreneurship"
+        },
+        {
+          "subject_code": "BX3174",
+          "subject_name": "Strategic Management & Leadership"
+        },
+        {
+          "subject_code": "TO1008",
+          "subject_name": "Introduction to Tourism, Hospitality and Events Management"
+        },
+        {
+          "subject_code": "TO2051",
+          "subject_name": "Innovation for Tourism, Hospitality and Events Futures"
+        },
+        {
+          "subject_code": "TO2117",
+          "subject_name": "Food and Beverage Management"
+        },
+        {
+          "subject_code": "TO3052",
+          "subject_name": "Experience Design for Tourism Hospitality and Events"
+        },
+        {
+          "subject_code": "TO3153",
+          "subject_name": "Revenue and Yield Management"
+        }
+      ]
+    },
+    {
+      "course_name": "Master of Business Administration",
+      "subject_list": [
+        {
+          "subject_code": "LB5113",
+          "subject_name": "Corporate Strategy"
+        },
+        {
+          "subject_code": "LB5202",
+          "subject_name": "Marketing Essentials"
+        },
+        {
+          "subject_code": "LB5203",
+          "subject_name": "Sustainable Enterprise"
+        },
+        {
+          "subject_code": "LB5205",
+          "subject_name": "People in Organisations"
+        },
+        {
+          "subject_code": "LB5212",
+          "subject_name": "Accounting and Finance for Managers"
+        },
+        {
+          "subject_code": "LB5228",
+          "subject_name": "The Changing Business Environment"
+        },
+        {
+          "subject_code": "LB5229",
+          "subject_name": "Economics For a Sustainable World"
+        },
+        {
+          "subject_code": "LB5230",
+          "subject_name": "Managing Strategic Resources and Operations"
+        },
+        {
+          "subject_code": "LB5231",
+          "subject_name": "Corporate Responsibility and Governance"
+        },
+        {
+          "subject_code": "LB5233",
+          "subject_name": "Innovation and Entrepreneurship"
+        },
+        {
+          "subject_code": "LB5234",
+          "subject_name": "Leading and Managing Organisational Change"
+        },
+        {
+          "subject_code": "LB5235",
+          "subject_name": "Applied Research Project"
+        },
+        {
+          "subject_code": "LB5236",
+          "subject_name": "International Political Economy"
+        },
+        {
+          "subject_code": "LB5241",
+          "subject_name": "Leadership Futures"
+        },
+        {
+          "subject_code": "LB5242",
+          "subject_name": "Value Creation Leadership"
+        },
+        {
+          "subject_code": "LB5245",
+          "subject_name": "Risk Assessment and Quality Project Management"
+        },
+        {
+          "subject_code": "LB5246",
+          "subject_name": "Project Governance and Asset Management"
+        },
+        {
+          "subject_code": "LB5247",
+          "subject_name": "Management Methods for Complex Projects"
+        },
+        {
+          "subject_code": "LB5403",
+          "subject_name": "Project Management Principles and Foundations"
+        },
+        {
+          "subject_code": "LB5520",
+          "subject_name": "Professional Project/Internship"
+        }
+      ]
+    },
+    {
+      "course_name": "Master of Data Science (Professional)",
+      "subject_list": [
+        {
+          "subject_code": "CP5046",
+          "subject_name": "ICT Project 1: Analysis and Design"
+        },
+        {
+          "subject_code": "CP5047",
+          "subject_name": "ICT Project 2: Implementation and Commissioning"
+        },
+        {
+          "subject_code": "CP5307",
+          "subject_name": "Advanced Mobile Technology"
+        },
+        {
+          "subject_code": "CP5310",
+          "subject_name": "E-Business Technologies"
+        },
+        {
+          "subject_code": "CP5503",
+          "subject_name": "Enterprise Database Systems - Oracle"
+        },
+        {
+          "subject_code": "CP5520",
+          "subject_name": "Advanced Databases and Applications"
+        },
+        {
+          "subject_code": "CP5601",
+          "subject_name": "Advanced Data Communications Principles"
+        },
+        {
+          "subject_code": "CP5602",
+          "subject_name": "Advanced Algorithm Analysis"
+        },
+        {
+          "subject_code": "CP5603",
+          "subject_name": "Advanced E-Security"
+        },
+        {
+          "subject_code": "CP5607",
+          "subject_name": "Advanced Human Computer Interaction"
+        },
+        {
+          "subject_code": "CP5631",
+          "subject_name": "Internet Fundamentals"
+        },
+        {
+          "subject_code": "CP5633",
+          "subject_name": "Database Modelling"
+        },
+        {
+          "subject_code": "CP5634",
+          "subject_name": "Data Mining"
+        },
+        {
+          "subject_code": "CP5638",
+          "subject_name": "Web Design and Development"
+        },
+        {
+          "subject_code": "CP5639",
+          "subject_name": "Fundamentals of Problem Solving and Programming I"
+        },
+        {
+          "subject_code": "MA5831",
+          "subject_name": "Advanced Data Management and Analysis using SAS"
+        },
+        {
+          "subject_code": "MA5840",
+          "subject_name": "Data Science and Strategic Decision Making for Business"
+        },
+        {
+          "subject_code": "MA5851",
+          "subject_name": "Data Science Master Class 1"
+        },
+        {
+          "subject_code": "MA5891",
+          "subject_name": "Professional Placement"
+        }
+      ]
+    },
+    {
+      "course_name": "Master of Education - Master of Business Administration",
+      "subject_list": [
+        {
+          "subject_code": "ED5097",
+          "subject_name": "Research Design and Proposal"
+        },
+        {
+          "subject_code": "ED5190",
+          "subject_name": "Introduction to Educational Research"
+        },
+        {
+          "subject_code": "ED5880",
+          "subject_name": "Educational Leadership"
+        },
+        {
+          "subject_code": "ED5882",
+          "subject_name": "Transformative Digital Learning"
+        },
+        {
+          "subject_code": "ED5883",
+          "subject_name": "Global Education"
+        },
+        {
+          "subject_code": "ED5912",
+          "subject_name": "Social Learning Perspectives for a Sustainable Future"
+        },
+        {
+          "subject_code": "LB5113",
+          "subject_name": "Corporate Strategy"
+        },
+        {
+          "subject_code": "LB5202",
+          "subject_name": "Marketing Essentials"
+        },
+        {
+          "subject_code": "LB5203",
+          "subject_name": "Sustainable Enterprise"
+        },
+        {
+          "subject_code": "LB5205",
+          "subject_name": "People in Organisations"
+        },
+        {
+          "subject_code": "LB5212",
+          "subject_name": "Accounting and Finance for Managers"
+        },
+        {
+          "subject_code": "LB5228",
+          "subject_name": "The Changing Business Environment"
+        },
+        {
+          "subject_code": "LB5229",
+          "subject_name": "Economics For a Sustainable World"
+        },
+        {
+          "subject_code": "LB5230",
+          "subject_name": "Managing Strategic Resources and Operations"
+        },
+        {
+          "subject_code": "LB5231",
+          "subject_name": "Corporate Responsibility and Governance"
+        },
+        {
+          "subject_code": "LB5233",
+          "subject_name": "Innovation and Entrepreneurship"
+        },
+        {
+          "subject_code": "LB5234",
+          "subject_name": "Leading and Managing Organisational Change"
+        },
+        {
+          "subject_code": "LB5235",
+          "subject_name": "Applied Research Project"
+        },
+        {
+          "subject_code": "LB5236",
+          "subject_name": "International Political Economy"
+        },
+        {
+          "subject_code": "LB5241",
+          "subject_name": "Leadership Futures"
+        },
+        {
+          "subject_code": "LB5242",
+          "subject_name": "Value Creation Leadership"
+        },
+        {
+          "subject_code": "LB5245",
+          "subject_name": "Risk Assessment and Quality Project Management"
+        },
+        {
+          "subject_code": "LB5246",
+          "subject_name": "Project Governance and Asset Management"
+        },
+        {
+          "subject_code": "LB5247",
+          "subject_name": "Management Methods for Complex Projects"
+        },
+        {
+          "subject_code": "LB5403",
+          "subject_name": "Project Management Principles and Foundations"
+        },
+        {
+          "subject_code": "LB5520",
+          "subject_name": "Professional Project/Internship"
+        }
+      ]
+    },
+    {
+      "course_name": "Master of Engineering Management",
+      "subject_list": [
+        {
+          "subject_code": "EG5200",
+          "subject_name": "Career Planning"
+        },
+        {
+          "subject_code": "EG5220",
+          "subject_name": "Advanced Asset Management and Reliability"
+        },
+        {
+          "subject_code": "EG5310",
+          "subject_name": "Professional Placement"
+        },
+        {
+          "subject_code": "LB5113",
+          "subject_name": "Corporate Strategy"
+        },
+        {
+          "subject_code": "LB5202",
+          "subject_name": "Marketing Essentials"
+        },
+        {
+          "subject_code": "LB5203",
+          "subject_name": "Sustainable Enterprise"
+        },
+        {
+          "subject_code": "LB5205",
+          "subject_name": "People in Organisations"
+        },
+        {
+          "subject_code": "LB5212",
+          "subject_name": "Accounting and Finance for Managers"
+        },
+        {
+          "subject_code": "LB5228",
+          "subject_name": "The Changing Business Environment"
+        },
+        {
+          "subject_code": "LB5229",
+          "subject_name": "Economics For a Sustainable World"
+        },
+        {
+          "subject_code": "LB5230",
+          "subject_name": "Managing Strategic Resources and Operations"
+        },
+        {
+          "subject_code": "LB5231",
+          "subject_name": "Corporate Responsibility and Governance"
+        },
+        {
+          "subject_code": "LB5233",
+          "subject_name": "Innovation and Entrepreneurship"
+        },
+        {
+          "subject_code": "LB5234",
+          "subject_name": "Leading and Managing Organisational Change"
+        },
+        {
+          "subject_code": "LB5235",
+          "subject_name": "Applied Research Project"
+        },
+        {
+          "subject_code": "LB5236",
+          "subject_name": "International Political Economy"
+        },
+        {
+          "subject_code": "LB5241",
+          "subject_name": "Leadership Futures"
+        },
+        {
+          "subject_code": "LB5242",
+          "subject_name": "Value Creation Leadership"
+        },
+        {
+          "subject_code": "LB5245",
+          "subject_name": "Risk Assessment and Quality Project Management"
+        },
+        {
+          "subject_code": "LB5246",
+          "subject_name": "Project Governance and Asset Management"
+        },
+        {
+          "subject_code": "LB5247",
+          "subject_name": "Management Methods for Complex Projects"
+        },
+        {
+          "subject_code": "LB5403",
+          "subject_name": "Project Management Principles and Foundations"
+        },
+        {
+          "subject_code": "LB5520",
+          "subject_name": "Professional Project/Internship"
+        }
+      ]
+    },
+    {
+      "course_name": "Master of Information Technology",
+      "subject_list": [
+        {
+          "subject_code": "CP5046",
+          "subject_name": "ICT Project 1: Analysis and Design"
+        },
+        {
+          "subject_code": "CP5047",
+          "subject_name": "ICT Project 2: Implementation and Commissioning"
+        },
+        {
+          "subject_code": "CP5307",
+          "subject_name": "Advanced Mobile Technology"
+        },
+        {
+          "subject_code": "CP5310",
+          "subject_name": "E-Business Technologies"
+        },
+        {
+          "subject_code": "CP5503",
+          "subject_name": "Enterprise Database Systems - Oracle"
+        },
+        {
+          "subject_code": "CP5520",
+          "subject_name": "Advanced Databases and Applications"
+        },
+        {
+          "subject_code": "CP5601",
+          "subject_name": "Advanced Data Communications Principles"
+        },
+        {
+          "subject_code": "CP5602",
+          "subject_name": "Advanced Algorithm Analysis"
+        },
+        {
+          "subject_code": "CP5603",
+          "subject_name": "Advanced E-Security"
+        },
+        {
+          "subject_code": "CP5607",
+          "subject_name": "Advanced Human Computer Interaction"
+        },
+        {
+          "subject_code": "CP5631",
+          "subject_name": "Internet Fundamentals"
+        },
+        {
+          "subject_code": "CP5633",
+          "subject_name": "Database Modelling"
+        },
+        {
+          "subject_code": "CP5634",
+          "subject_name": "Data Mining"
+        },
+        {
+          "subject_code": "CP5638",
+          "subject_name": "Web Design and Development"
+        },
+        {
+          "subject_code": "CP5639",
+          "subject_name": "Fundamentals of Problem Solving and Programming I"
+        }
+      ]
+    },
+    {
+      "course_name": "Master of Information Technology - Master of Business Administration",
+      "subject_list": [
+        {
+          "subject_code": "CP5046",
+          "subject_name": "ICT Project 1: Analysis and Design"
+        },
+        {
+          "subject_code": "CP5047",
+          "subject_name": "ICT Project 2: Implementation and Commissioning"
+        },
+        {
+          "subject_code": "CP5307",
+          "subject_name": "Advanced Mobile Technology"
+        },
+        {
+          "subject_code": "CP5310",
+          "subject_name": "E-Business Technologies"
+        },
+        {
+          "subject_code": "CP5503",
+          "subject_name": "Enterprise Database Systems - Oracle"
+        },
+        {
+          "subject_code": "CP5520",
+          "subject_name": "Advanced Databases and Applications"
+        },
+        {
+          "subject_code": "CP5601",
+          "subject_name": "Advanced Data Communications Principles"
+        },
+        {
+          "subject_code": "CP5602",
+          "subject_name": "Advanced Algorithm Analysis"
+        },
+        {
+          "subject_code": "CP5603",
+          "subject_name": "Advanced E-Security"
+        },
+        {
+          "subject_code": "CP5607",
+          "subject_name": "Advanced Human Computer Interaction"
+        },
+        {
+          "subject_code": "CP5631",
+          "subject_name": "Internet Fundamentals"
+        },
+        {
+          "subject_code": "CP5633",
+          "subject_name": "Database Modelling"
+        },
+        {
+          "subject_code": "CP5634",
+          "subject_name": "Data Mining"
+        },
+        {
+          "subject_code": "CP5638",
+          "subject_name": "Web Design and Development"
+        },
+        {
+          "subject_code": "CP5639",
+          "subject_name": "Fundamentals of Problem Solving and Programming I"
+        },
+        {
+          "subject_code": "LB5113",
+          "subject_name": "Corporate Strategy"
+        },
+        {
+          "subject_code": "LB5202",
+          "subject_name": "Marketing Essentials"
+        },
+        {
+          "subject_code": "LB5203",
+          "subject_name": "Sustainable Enterprise"
+        },
+        {
+          "subject_code": "LB5205",
+          "subject_name": "People in Organisations"
+        },
+        {
+          "subject_code": "LB5212",
+          "subject_name": "Accounting and Finance for Managers"
+        },
+        {
+          "subject_code": "LB5228",
+          "subject_name": "The Changing Business Environment"
+        },
+        {
+          "subject_code": "LB5229",
+          "subject_name": "Economics For a Sustainable World"
+        },
+        {
+          "subject_code": "LB5230",
+          "subject_name": "Managing Strategic Resources and Operations"
+        },
+        {
+          "subject_code": "LB5231",
+          "subject_name": "Corporate Responsibility and Governance"
+        },
+        {
+          "subject_code": "LB5233",
+          "subject_name": "Innovation and Entrepreneurship"
+        },
+        {
+          "subject_code": "LB5234",
+          "subject_name": "Leading and Managing Organisational Change"
+        },
+        {
+          "subject_code": "LB5235",
+          "subject_name": "Applied Research Project"
+        },
+        {
+          "subject_code": "LB5236",
+          "subject_name": "International Political Economy"
+        },
+        {
+          "subject_code": "LB5241",
+          "subject_name": "Leadership Futures"
+        },
+        {
+          "subject_code": "LB5242",
+          "subject_name": "Value Creation Leadership"
+        },
+        {
+          "subject_code": "LB5245",
+          "subject_name": "Risk Assessment and Quality Project Management"
+        },
+        {
+          "subject_code": "LB5246",
+          "subject_name": "Project Governance and Asset Management"
+        },
+        {
+          "subject_code": "LB5247",
+          "subject_name": "Management Methods for Complex Projects"
+        },
+        {
+          "subject_code": "LB5403",
+          "subject_name": "Project Management Principles and Foundations"
+        },
+        {
+          "subject_code": "LB5520",
+          "subject_name": "Professional Project/Internship"
+        }
+      ]
+    },
+    {
+      "course_name": "Master of International Tourism and Hospitality Management",
+      "subject_list": [
+        {
+          "subject_code": "TO5101",
+          "subject_name": "Tourism Systems Analysis"
+        },
+        {
+          "subject_code": "TO5103",
+          "subject_name": "Global Destinations and Competitiveness"
+        },
+        {
+          "subject_code": "TO5104",
+          "subject_name": "Tourist Management Strategies"
+        },
+        {
+          "subject_code": "TO5202",
+          "subject_name": "Economic Decision-Making in the Hospitality Industry"
+        }
+      ]
+    },
+    {
+      "course_name": "Master of International Tourism and Hospitality Management - Master of Business Administration",
+      "subject_list": [
+        {
+          "subject_code": "LB5113",
+          "subject_name": "Corporate Strategy"
+        },
+        {
+          "subject_code": "LB5202",
+          "subject_name": "Marketing Essentials"
+        },
+        {
+          "subject_code": "LB5203",
+          "subject_name": "Sustainable Enterprise"
+        },
+        {
+          "subject_code": "LB5205",
+          "subject_name": "People in Organisations"
+        },
+        {
+          "subject_code": "LB5212",
+          "subject_name": "Accounting and Finance for Managers"
+        },
+        {
+          "subject_code": "LB5228",
+          "subject_name": "The Changing Business Environment"
+        },
+        {
+          "subject_code": "LB5229",
+          "subject_name": "Economics For a Sustainable World"
+        },
+        {
+          "subject_code": "LB5230",
+          "subject_name": "Managing Strategic Resources and Operations"
+        },
+        {
+          "subject_code": "LB5231",
+          "subject_name": "Corporate Responsibility and Governance"
+        },
+        {
+          "subject_code": "LB5233",
+          "subject_name": "Innovation and Entrepreneurship"
+        },
+        {
+          "subject_code": "LB5234",
+          "subject_name": "Leading and Managing Organisational Change"
+        },
+        {
+          "subject_code": "LB5235",
+          "subject_name": "Applied Research Project"
+        },
+        {
+          "subject_code": "LB5236",
+          "subject_name": "International Political Economy"
+        },
+        {
+          "subject_code": "LB5241",
+          "subject_name": "Leadership Futures"
+        },
+        {
+          "subject_code": "LB5242",
+          "subject_name": "Value Creation Leadership"
+        },
+        {
+          "subject_code": "LB5245",
+          "subject_name": "Risk Assessment and Quality Project Management"
+        },
+        {
+          "subject_code": "LB5246",
+          "subject_name": "Project Governance and Asset Management"
+        },
+        {
+          "subject_code": "LB5247",
+          "subject_name": "Management Methods for Complex Projects"
+        },
+        {
+          "subject_code": "LB5403",
+          "subject_name": "Project Management Principles and Foundations"
+        },
+        {
+          "subject_code": "LB5520",
+          "subject_name": "Professional Project/Internship"
+        },
+        {
+          "subject_code": "TO5101",
+          "subject_name": "Tourism Systems Analysis"
+        },
+        {
+          "subject_code": "TO5103",
+          "subject_name": "Global Destinations and Competitiveness"
+        },
+        {
+          "subject_code": "TO5104",
+          "subject_name": "Tourist Management Strategies"
+        },
+        {
+          "subject_code": "TO5202",
+          "subject_name": "Economic Decision-Making in the Hospitality Industry"
+        }
+      ]
+    },
+    {
+      "course_name": "Master of Professional Accounting",
+      "subject_list": [
+        {
+          "subject_code": "CO5103",
+          "subject_name": "Management Accounting"
+        },
+        {
+          "subject_code": "CO5109",
+          "subject_name": "Corporate Finance"
+        },
+        {
+          "subject_code": "CO5117",
+          "subject_name": "Introduction to Accounting"
+        },
+        {
+          "subject_code": "CO5118",
+          "subject_name": "Auditing and Assurance Services"
+        },
+        {
+          "subject_code": "CO5119",
+          "subject_name": "Business Law"
+        },
+        {
+          "subject_code": "CO5120",
+          "subject_name": "Taxation Law"
+        },
+        {
+          "subject_code": "CO5121",
+          "subject_name": "Law of Business Organisations"
+        },
+        {
+          "subject_code": "CO5122",
+          "subject_name": "Accounting for Corporations"
+        },
+        {
+          "subject_code": "CO5123",
+          "subject_name": "Advanced Issues in Accounting"
+        },
+        {
+          "subject_code": "CO5124",
+          "subject_name": "Data Analysis and Decision Modelling"
+        },
+        {
+          "subject_code": "CO5140",
+          "subject_name": "Information Analysis and Systems"
+        }
+      ]
+    },
+    {
+      "course_name": "Master of Professional Accounting - Master of Business Administration",
+      "subject_list": [
+        {
+          "subject_code": "CO5103",
+          "subject_name": "Management Accounting"
+        },
+        {
+          "subject_code": "CO5109",
+          "subject_name": "Corporate Finance"
+        },
+        {
+          "subject_code": "CO5117",
+          "subject_name": "Introduction to Accounting"
+        },
+        {
+          "subject_code": "CO5118",
+          "subject_name": "Auditing and Assurance Services"
+        },
+        {
+          "subject_code": "CO5119",
+          "subject_name": "Business Law"
+        },
+        {
+          "subject_code": "CO5120",
+          "subject_name": "Taxation Law"
+        },
+        {
+          "subject_code": "CO5121",
+          "subject_name": "Law of Business Organisations"
+        },
+        {
+          "subject_code": "CO5122",
+          "subject_name": "Accounting for Corporations"
+        },
+        {
+          "subject_code": "CO5123",
+          "subject_name": "Advanced Issues in Accounting"
+        },
+        {
+          "subject_code": "CO5124",
+          "subject_name": "Data Analysis and Decision Modelling"
+        },
+        {
+          "subject_code": "CO5140",
+          "subject_name": "Information Analysis and Systems"
+        },
+        {
+          "subject_code": "LB5113",
+          "subject_name": "Corporate Strategy"
+        },
+        {
+          "subject_code": "LB5202",
+          "subject_name": "Marketing Essentials"
+        },
+        {
+          "subject_code": "LB5203",
+          "subject_name": "Sustainable Enterprise"
+        },
+        {
+          "subject_code": "LB5205",
+          "subject_name": "People in Organisations"
+        },
+        {
+          "subject_code": "LB5212",
+          "subject_name": "Accounting and Finance for Managers"
+        },
+        {
+          "subject_code": "LB5228",
+          "subject_name": "The Changing Business Environment"
+        },
+        {
+          "subject_code": "LB5229",
+          "subject_name": "Economics For a Sustainable World"
+        },
+        {
+          "subject_code": "LB5230",
+          "subject_name": "Managing Strategic Resources and Operations"
+        },
+        {
+          "subject_code": "LB5231",
+          "subject_name": "Corporate Responsibility and Governance"
+        },
+        {
+          "subject_code": "LB5233",
+          "subject_name": "Innovation and Entrepreneurship"
+        },
+        {
+          "subject_code": "LB5234",
+          "subject_name": "Leading and Managing Organisational Change"
+        },
+        {
+          "subject_code": "LB5235",
+          "subject_name": "Applied Research Project"
+        },
+        {
+          "subject_code": "LB5236",
+          "subject_name": "International Political Economy"
+        },
+        {
+          "subject_code": "LB5241",
+          "subject_name": "Leadership Futures"
+        },
+        {
+          "subject_code": "LB5242",
+          "subject_name": "Value Creation Leadership"
+        },
+        {
+          "subject_code": "LB5245",
+          "subject_name": "Risk Assessment and Quality Project Management"
+        },
+        {
+          "subject_code": "LB5246",
+          "subject_name": "Project Governance and Asset Management"
+        },
+        {
+          "subject_code": "LB5247",
+          "subject_name": "Management Methods for Complex Projects"
+        },
+        {
+          "subject_code": "LB5403",
+          "subject_name": "Project Management Principles and Foundations"
+        },
+        {
+          "subject_code": "LB5520",
+          "subject_name": "Professional Project/Internship"
+        }
+      ]
+    },
+    {
+      "course_name": "Postgraduate Qualifying Program - Business",
+      "subject_list": [
+        {
+          "subject_code": "LB5113",
+          "subject_name": "Corporate Strategy"
+        },
+        {
+          "subject_code": "LB5202",
+          "subject_name": "Marketing Essentials"
+        },
+        {
+          "subject_code": "LB5203",
+          "subject_name": "Sustainable Enterprise"
+        },
+        {
+          "subject_code": "LB5205",
+          "subject_name": "People in Organisations"
+        },
+        {
+          "subject_code": "LB5212",
+          "subject_name": "Accounting and Finance for Managers"
+        },
+        {
+          "subject_code": "LB5228",
+          "subject_name": "The Changing Business Environment"
+        },
+        {
+          "subject_code": "LB5229",
+          "subject_name": "Economics For a Sustainable World"
+        },
+        {
+          "subject_code": "LB5230",
+          "subject_name": "Managing Strategic Resources and Operations"
+        },
+        {
+          "subject_code": "LB5231",
+          "subject_name": "Corporate Responsibility and Governance"
+        },
+        {
+          "subject_code": "LB5233",
+          "subject_name": "Innovation and Entrepreneurship"
+        },
+        {
+          "subject_code": "LB5234",
+          "subject_name": "Leading and Managing Organisational Change"
+        },
+        {
+          "subject_code": "LB5235",
+          "subject_name": "Applied Research Project"
+        },
+        {
+          "subject_code": "LB5236",
+          "subject_name": "International Political Economy"
+        },
+        {
+          "subject_code": "LB5241",
+          "subject_name": "Leadership Futures"
+        },
+        {
+          "subject_code": "LB5242",
+          "subject_name": "Value Creation Leadership"
+        },
+        {
+          "subject_code": "LB5245",
+          "subject_name": "Risk Assessment and Quality Project Management"
+        },
+        {
+          "subject_code": "LB5246",
+          "subject_name": "Project Governance and Asset Management"
+        },
+        {
+          "subject_code": "LB5247",
+          "subject_name": "Management Methods for Complex Projects"
+        },
+        {
+          "subject_code": "LB5403",
+          "subject_name": "Project Management Principles and Foundations"
+        },
+        {
+          "subject_code": "LB5520",
+          "subject_name": "Professional Project/Internship"
+        }
+      ]
+    }
+  ]
+}

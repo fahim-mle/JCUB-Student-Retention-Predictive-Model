@@ -7,6 +7,7 @@ Generates realistic student retention data based on research patterns
 import pandas as pd
 import numpy as np
 import random
+import json
 from faker import Faker
 from scipy import stats
 import warnings
@@ -26,6 +27,9 @@ class SyntheticStudentDataGenerator:
         # Load original data patterns
         self.original_df = pd.read_csv('file_converter/output_csv/student_data.csv')
         self.extract_original_patterns()
+        
+        # Load course and subject mapping
+        self.load_course_subject_mapping()
         
         # Risk distribution based on client data (300/2000 students needing support)
         self.risk_distribution = {
@@ -56,6 +60,66 @@ class SyntheticStudentDataGenerator:
         }
         
         print("✓ Extracted categorical patterns from original dataset")
+        
+    def load_course_subject_mapping(self):
+        """Load course and subject mapping from JSON file"""
+        try:
+            with open('synthetic_data_gen/course_and_subject.json', 'r') as f:
+                data = json.load(f)
+            
+            # Create mapping dictionary for easy lookup
+            self.course_subjects = {}
+            for course_data in data['courses_and_subjects']:
+                course_name = course_data['course_name']
+                subjects = course_data['subject_list']
+                self.course_subjects[course_name] = subjects
+            
+            print(f"✓ Loaded course-subject mapping for {len(self.course_subjects)} courses")
+            
+        except FileNotFoundError:
+            print("! Warning: course_and_subject.json not found, using fallback subject assignment")
+            self.course_subjects = {}
+            
+    def assign_subject_for_course(self, course_name, subject_number):
+        """Assign a subject code based on the student's course"""
+        
+        # Normalize course name to match JSON keys
+        course_key = course_name
+        
+        # Try to find exact match first
+        if course_key in self.course_subjects:
+            subjects = self.course_subjects[course_key]
+            if subjects:
+                # Randomly select from available subjects for this course
+                selected_subject = random.choice(subjects)
+                return selected_subject['subject_code']
+        
+        # Try partial matching for similar course names
+        for key in self.course_subjects.keys():
+            if course_name.lower() in key.lower() or key.lower() in course_name.lower():
+                subjects = self.course_subjects[key]
+                if subjects:
+                    selected_subject = random.choice(subjects)
+                    return selected_subject['subject_code']
+        
+        # Fallback: return a subject code based on course type
+        fallback_subjects = {
+            'business': ['LB5113', 'LB5202', 'LB5205'],
+            'information technology': ['CP5046', 'CP5047', 'CP5503'],
+            'data science': ['MA5831', 'MA5840', 'MA5851'],
+            'tourism': ['TO5101', 'TO5103', 'TO5104'],
+            'accounting': ['CO5117', 'CO5103', 'CO5109'],
+            'engineering': ['EG5200', 'EG5220', 'EG5310'],
+            'education': ['ED5097', 'ED5880', 'ED5882']
+        }
+        
+        course_lower = course_name.lower()
+        for category, subjects in fallback_subjects.items():
+            if category in course_lower:
+                return random.choice(subjects)
+        
+        # Final fallback
+        return 'LB5113'  # Corporate Strategy as default
         
     def assign_risk_levels(self):
         """Assign risk levels to students based on distribution"""
@@ -228,12 +292,87 @@ class SyntheticStudentDataGenerator:
         
         print("✓ Generated support system data")
         return profiles
+    
+    def determine_submission_patterns(self, profiles):
+        """Determine realistic submission patterns for each student"""
+        
+        # Submission pattern distribution
+        submission_patterns = {
+            'both_submitted': 0.65,    # 65% submit both assessments
+            'assess1_only': 0.32,      # 32% submit only assessment 1
+            'none_submitted': 0.03     # 3% submit neither assessment
+        }
+        
+        # Identify students eligible for non-submission (3%)
+        eligible_for_non_submission = []
+        for i, profile in enumerate(profiles):
+            is_eligible = (
+                profile['student_cohort'] in ['New', 'First year'] or
+                profile['failed_subjects'] is not None
+            )
+            if is_eligible:
+                eligible_for_non_submission.append(i)
+        
+        # Calculate numbers for each pattern
+        n_students = len(profiles)
+        n_none = int(n_students * submission_patterns['none_submitted'])
+        n_assess1_only = int(n_students * submission_patterns['assess1_only'])
+        n_both = n_students - n_none - n_assess1_only
+        
+        # Assign patterns
+        submission_assignments = ['both_submitted'] * n_both
+        submission_assignments.extend(['assess1_only'] * n_assess1_only)
+        submission_assignments.extend(['none_submitted'] * n_none)
+        
+        # Shuffle the assignments
+        random.shuffle(submission_assignments)
+        
+        # Ensure non-submitters are from eligible students
+        if len(eligible_for_non_submission) >= n_none:
+            # Randomly select from eligible students for non-submission
+            non_submitter_indices = random.sample(eligible_for_non_submission, n_none)
+            
+            # Reset all to 'both_submitted' first
+            for i in range(n_students):
+                profiles[i]['submission_pattern'] = 'both_submitted'
+            
+            # Assign non-submission pattern to selected eligible students
+            for idx in non_submitter_indices:
+                profiles[idx]['submission_pattern'] = 'none_submitted'
+            
+            # Assign assess1_only to remaining students (excluding non-submitters)
+            remaining_indices = [i for i in range(n_students) if i not in non_submitter_indices]
+            assess1_only_indices = random.sample(remaining_indices, n_assess1_only)
+            
+            for idx in assess1_only_indices:
+                profiles[idx]['submission_pattern'] = 'assess1_only'
+        else:
+            # If not enough eligible students, assign patterns randomly
+            for i, pattern in enumerate(submission_assignments):
+                profiles[i]['submission_pattern'] = pattern
+        
+        # Count actual patterns
+        pattern_counts = {}
+        for profile in profiles:
+            pattern = profile['submission_pattern']
+            pattern_counts[pattern] = pattern_counts.get(pattern, 0) + 1
+        
+        print(f"✓ Submission patterns assigned:")
+        for pattern, count in pattern_counts.items():
+            percentage = (count / n_students) * 100
+            print(f"  {pattern}: {count} ({percentage:.1f}%)")
+        
+        return profiles
         
     def generate_academic_performance(self, profiles):
-        """Generate academic performance data with realistic patterns"""
+        """Generate academic performance data with realistic submission patterns (mid-semester: only assess 1 & 2)"""
+        
+        # First determine submission patterns for each student
+        profiles = self.determine_submission_patterns(profiles)
         
         for profile in profiles:
             risk_level = profile['risk_level']
+            submission_pattern = profile['submission_pattern']
             
             # Define grade distributions by risk level (research-backed)
             grade_params = {
@@ -248,50 +387,58 @@ class SyntheticStudentDataGenerator:
             # Generate assessment scores for each subject
             for subject_num in range(1, 4):  # subjects 1, 2, 3
                 
-                # Assessment 1 is the strongest predictor (78% accuracy)
-                # Generate base score with higher variance for prediction accuracy
-                if subject_num == 1:
-                    # Subject 1 typically lowest (foundational filter)
-                    base_mean = params['mean'] - 5
-                else:
-                    base_mean = params['mean']
+                # Assign subject code based on course
+                profile[f'subject_{subject_num}'] = self.assign_subject_for_course(profile['course'], subject_num)
+                
+                # Generate assessments based on submission pattern
+                if submission_pattern == 'none_submitted':
+                    # Student submitted neither assessment
+                    profile[f'subject_{subject_num}_assess_1'] = None
+                    profile[f'subject_{subject_num}_assess_2'] = None
                     
-                assess_1 = np.random.normal(base_mean, params['std'])
-                assess_1 = np.clip(assess_1, 0, 100)
+                elif submission_pattern == 'assess1_only':
+                    # Student submitted only assessment 1
+                    if subject_num == 1:
+                        # Subject 1 typically lowest (foundational filter)
+                        base_mean = params['mean'] - 5
+                    else:
+                        base_mean = params['mean']
+                        
+                    assess_1 = np.random.normal(base_mean, params['std'])
+                    assess_1 = np.clip(assess_1, 0, 100)
+                    
+                    profile[f'subject_{subject_num}_assess_1'] = round(assess_1, 2)
+                    profile[f'subject_{subject_num}_assess_2'] = None
+                    
+                else:  # both_submitted
+                    # Student submitted both assessments
+                    if subject_num == 1:
+                        # Subject 1 typically lowest (foundational filter)
+                        base_mean = params['mean'] - 5
+                    else:
+                        base_mean = params['mean']
+                        
+                    assess_1 = np.random.normal(base_mean, params['std'])
+                    assess_1 = np.clip(assess_1, 0, 100)
+                    
+                    # Subsequent assessments show patterns based on intervention
+                    intervention_effect = 0
+                    if profile['follow_up'] == 'Yes' and profile['pp_meeting'] != 'Not relevant':
+                        # Students with intervention show 5-15% improvement
+                        intervention_effect = np.random.uniform(5, 15)
+                    
+                    # Assessment 2: Slight improvement if intervention
+                    assess_2 = assess_1 + intervention_effect/2 + np.random.normal(0, 8)
+                    assess_2 = np.clip(assess_2, 0, 100)
+                    
+                    profile[f'subject_{subject_num}_assess_1'] = round(assess_1, 2)
+                    profile[f'subject_{subject_num}_assess_2'] = round(assess_2, 2)
                 
-                # Subsequent assessments show patterns based on intervention
-                intervention_effect = 0
-                if profile['follow_up'] == 'Yes' and profile['pp_meeting'] != 'Not relevant':
-                    # Students with intervention show 5-15% improvement
-                    intervention_effect = np.random.uniform(5, 15)
-                
-                # Assessment 2: Slight improvement if intervention
-                assess_2 = assess_1 + intervention_effect/2 + np.random.normal(0, 8)
-                assess_2 = np.clip(assess_2, 0, 100)
-                
-                # Assessment 3: More improvement if intervention
-                assess_3 = assess_1 + intervention_effect + np.random.normal(0, 10)
-                assess_3 = np.clip(assess_3, 0, 100)
-                
-                # Assessment 4: Sustained improvement or decline
-                trend = (assess_3 - assess_1) / 2  # Half the trend continues
-                assess_4 = assess_3 + trend + np.random.normal(0, 12)
-                assess_4 = np.clip(assess_4, 0, 100)
-                
-                # Store assessments
-                profile[f'subject_{subject_num}_assess_1'] = round(assess_1, 2)
-                profile[f'subject_{subject_num}_assess_2'] = round(assess_2, 2)
-                profile[f'subject_{subject_num}_assess_3'] = round(assess_3, 2)
-                if subject_num == 3:
-                    # Original data has 'subject_4_assess_4' for subject 3's 4th assessment
-                    profile['subject_4_assess_4'] = round(assess_4, 2)
-                else:
-                    profile[f'subject_{subject_num}_assess_4'] = round(assess_4, 2)
-                
-                # Add empty subject grade (as in original data)
-                profile[f'subject_{subject_num}'] = None
+                # Leave assessments 3 and 4 as None for mid-semester prediction
+                profile[f'subject_{subject_num}_assess_3'] = None
+                profile[f'subject_{subject_num}_assess_4'] = None
         
-        print("✓ Generated academic performance data with realistic patterns")
+        print("✓ Generated academic performance data with realistic submission patterns (mid-semester)")
         return profiles
         
     def generate_attendance_patterns(self, profiles):
@@ -369,7 +516,7 @@ class SyntheticStudentDataGenerator:
                 # Determine referral type based on patterns
                 if attendance < 50:
                     referral_type = 'Attendance'
-                elif assessment_score < 30:
+                elif assessment_score is None or assessment_score < 30:
                     referral_type = 'Non Submission'
                 elif risk_level in ['high_risk', 'critical_risk']:
                     referral_type = 'Concern for Welfare'
@@ -489,18 +636,41 @@ class SyntheticStudentDataGenerator:
         support_rate = (high_risk_students['follow_up'] == 'Yes').mean()
         print(f"✓ High-risk students receiving follow-up: {support_rate:.1%}")
         
-        # Validation 5: Check assessment progression
+        # Validation 5: Check assessment progression (mid-semester: only 1-2 available)
         print(f"✓ Assessment score progression (Subject 1):")
         print(f"  Assess 1 mean: {df['subject_1_assess_1'].mean():.1f}")
         print(f"  Assess 2 mean: {df['subject_1_assess_2'].mean():.1f}")
-        print(f"  Assess 3 mean: {df['subject_1_assess_3'].mean():.1f}")
-        print(f"  Assess 4 mean: {df['subject_1_assess_4'].mean():.1f}")
+        print(f"  Assess 3: Not available (mid-semester)")
+        print(f"  Assess 4: Not available (mid-semester)")
         
-        # Validation 6: Check missing data patterns
+        # Validation 6: Check submission patterns
+        if 'submission_pattern' in df.columns:
+            print(f"✓ Submission pattern validation:")
+            submission_counts = df['submission_pattern'].value_counts()
+            for pattern, count in submission_counts.items():
+                percentage = (count / len(df)) * 100
+                print(f"  {pattern}: {count} ({percentage:.1f}%)")
+            
+            # Validate that non-submitters meet criteria
+            non_submitters = df[df['submission_pattern'] == 'none_submitted']
+            eligible_non_submitters = non_submitters[
+                (non_submitters['student_cohort'].isin(['New', 'First year'])) |
+                (non_submitters['failed_subjects'].notna())
+            ]
+            eligibility_rate = len(eligible_non_submitters) / len(non_submitters) if len(non_submitters) > 0 else 0
+            print(f"  Non-submitters meeting criteria: {len(eligible_non_submitters)}/{len(non_submitters)} ({eligibility_rate:.1%})")
+        
+        # Validation 7: Check missing data patterns
         print(f"✓ Missing data patterns:")
         print(f"  Failed subjects missing: {df['failed_subjects'].isnull().sum()}/{len(df)} ({df['failed_subjects'].isnull().mean():.1%})")
         print(f"  Study skills missing: {df['study_skills(attended)'].isnull().sum()}/{len(df)} ({df['study_skills(attended)'].isnull().mean():.1%})")
         print(f"  Referral missing: {df['referral'].isnull().sum()}/{len(df)} ({df['referral'].isnull().mean():.1%})")
+        
+        # Validation 8: Check assessment submission patterns
+        assess1_missing = df['subject_1_assess_1'].isnull().sum()
+        assess2_missing = df['subject_1_assess_2'].isnull().sum()
+        print(f"  Assessment 1 missing: {assess1_missing}/{len(df)} ({assess1_missing/len(df):.1%})")
+        print(f"  Assessment 2 missing: {assess2_missing}/{len(df)} ({assess2_missing/len(df):.1%})")
         
         return df
         
@@ -509,8 +679,11 @@ class SyntheticStudentDataGenerator:
         
         print("=== EXPORTING SYNTHETIC DATASET ===")
         
-        # Remove the risk_level column (internal use only)
-        df_export = df.drop('risk_level', axis=1)
+        # Remove internal columns (risk_level and submission_pattern)
+        columns_to_drop = ['risk_level']
+        if 'submission_pattern' in df.columns:
+            columns_to_drop.append('submission_pattern')
+        df_export = df.drop(columns_to_drop, axis=1)
         
         # Reorder columns to match original dataset
         original_columns = [
@@ -521,7 +694,7 @@ class SyntheticStudentDataGenerator:
             'attendance_1', 'learn_jcu_issues_1', 'lecturer_referral_1',
             'subject_2', 'subject_2_assess_1', 'subject_2_assess_2', 'subject_2_assess_3', 'subject_2_assess_4',
             'attendance_2', 'learn_jcu_issues_2', 'lecturer_referral_2',
-            'subject_3', 'subject_3_assess_1', 'subject_3_assess_2', 'subject_3_assess_3', 'subject_4_assess_4',
+            'subject_3', 'subject_3_assess_1', 'subject_3_assess_2', 'subject_3_assess_3', 'subject_3_assess_4',
             'attendance_3', 'learn_jcu_issues_3', 'lecturer_referral_3',
             'comments', 'identified_issues'
         ]
